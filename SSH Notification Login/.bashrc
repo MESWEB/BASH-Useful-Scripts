@@ -1,2 +1,2 @@
 # ssh mail notification
-echo 'NOTIFICATION - Access SSH on ROOT from `hostname` at:' `date` `who` | mail -s "NOTIFICATION - Connection on ROOT via SSH from: `who | cut -d"(" -f2 | cut -d")" -f1`" your@e-mail.com
+echo 'ALERT - '$USER' shell access found on '$HOSTNAME' on:' `date` `who` | mail -s "Alert: User shell access" your@e-mail.com
